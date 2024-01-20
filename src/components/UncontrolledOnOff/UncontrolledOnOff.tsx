@@ -2,27 +2,32 @@ import React, {useState} from 'react';
 import styled from "styled-components";
 
 type OnOffProps = {
-    //on: boolean
+    onOff: boolean
+    onClick: (onOff: boolean) => void
 }
-export const OnOff = () => {
-    let [on, setOn] = useState(false)
+export const UncontrolledOnOff = (props: OnOffProps) => {
 
     return (
 
         <WrapperBox>
             <BoxStyled
-                style={on ? {"backgroundColor": "#aefcae"} : {"backgroundColor": "white"}}
-                onClick={() => setOn(true)}
+                style={props.onOff ? {"backgroundColor": "#aefcae"} : {"backgroundColor": "white"}}
+                onClick={() => {
+                    props.onClick(!props.onOff)
+                }}
             >
                 On
             </BoxStyled>
             <BoxStyled
-                style={on ? {"backgroundColor": "white"} : {"backgroundColor": "#ff8b8b"}}
-                onClick={() => setOn(false)}
+                style={props.onOff ? {"backgroundColor": "white"} : {"backgroundColor": "#ff8b8b"}}
+                onClick={() => {
+                    props.onClick(!props.onOff)
+                }}
             >
                 Off
             </BoxStyled>
-            <CircleStyled style={on ? {"backgroundColor": "#aefcae"} : {"backgroundColor": "#ff8b8b"}}></CircleStyled>
+            <CircleStyled
+                style={props.onOff ? {"backgroundColor": "#aefcae"} : {"backgroundColor": "#ff8b8b"}}></CircleStyled>
         </WrapperBox>
     );
 };
