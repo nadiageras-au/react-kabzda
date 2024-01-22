@@ -2,32 +2,27 @@ import React, {useState} from 'react';
 import styled from "styled-components";
 
 type OnOffProps = {
-    onOff: boolean
-    onClick: (onOff: boolean) => void
+    //on: boolean
 }
-export const UncontrolledOnOff = (props: OnOffProps) => {
+export const UncontrolledOnOff = () => {
+    let [on, setOn] = useState(false)
 
     return (
 
         <WrapperBox>
             <BoxStyled
-                style={props.onOff ? {"backgroundColor": "#aefcae"} : {"backgroundColor": "white"}}
-                onClick={() => {
-                    props.onClick(!props.onOff)
-                }}
+                style={on ? {"backgroundColor": "#aefcae"} : {"backgroundColor": "white"}}
+                onClick={() => setOn(true)}
             >
                 On
             </BoxStyled>
             <BoxStyled
-                style={props.onOff ? {"backgroundColor": "white"} : {"backgroundColor": "#ff8b8b"}}
-                onClick={() => {
-                    props.onClick(!props.onOff)
-                }}
+                style={on ? {"backgroundColor": "white"} : {"backgroundColor": "#ff8b8b"}}
+                onClick={() => setOn(false)}
             >
                 Off
             </BoxStyled>
-            <CircleStyled
-                style={props.onOff ? {"backgroundColor": "#aefcae"} : {"backgroundColor": "#ff8b8b"}}></CircleStyled>
+            <CircleStyled style={on ? {"backgroundColor": "#aefcae"} : {"backgroundColor": "#ff8b8b"}}></CircleStyled>
         </WrapperBox>
     );
 };
@@ -51,3 +46,4 @@ const CircleStyled = styled.div`
   height: 20px;
   border: 1px solid black;
 `
+

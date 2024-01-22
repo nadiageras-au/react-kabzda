@@ -21,9 +21,9 @@ function App() {
         <div>
             <AppTitle/>
             {/*<OnOff/>*/}
-            <OnOff/>
+            <OnOff onOff={onOff} onClick={setOnOff}/>
             ------------------------
-            <UncontrolledOnOff onOff={onOff} onClick={setOnOff}/>
+            <UncontrolledOnOff />
             <UncontrolledRating value={4}/>
 
             <Accordion titleValue="Menu" collapsed={accordionCollapsed} onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>
