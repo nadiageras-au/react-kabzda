@@ -2290,6 +2290,18 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@storybook/addon-actions@*":
+  version "7.6.14"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.6.14.tgz#4520542bc7b681e59c2884f116f9cedb2e4e4f4b"
+  integrity sha512-hFVB/ejxBdE6J3wOEPSx6aFB51PqDfQ/YR4ik5GCGJb3cmUX7d/FY8zH0TKJLXcG/Hw3XoxNiEo5AaMVxtGVGA==
+  dependencies:
+    "@storybook/core-events" "7.6.14"
+    "@storybook/global" "^5.0.0"
+    "@types/uuid" "^9.0.1"
+    dequal "^2.0.2"
+    polished "^4.2.2"
+    uuid "^9.0.0"
+
 "@storybook/addon-actions@7.6.10":
   version "7.6.10"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.6.10.tgz#5b43534e158797114db032f4ad8505a81809ed00"
@@ -2665,6 +2677,13 @@
   version "7.6.10"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.6.10.tgz#d521cbdadebfa56caaa8815a1e132694a20f05e9"
   integrity sha512-yccDH67KoROrdZbRKwxgTswFMAco5nlCyxszCDASCLygGSV2Q2e+YuywrhchQl3U6joiWi3Ps1qWu56NeNafag==
+  dependencies:
+    ts-dedent "^2.0.0"
+
+"@storybook/core-events@7.6.14":
+  version "7.6.14"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-7.6.14.tgz#4ba595ea6df1bd760e8ed5c9ec8a39a722e09339"
+  integrity sha512-zuSMjOgju7WLFL+okTXVvOKKNzwqVGRVp5UhXeSikT4aXuVdpfepCfikkjntn12G1ybL7mfFCsBU2DV1lwwp6Q==
   dependencies:
     ts-dedent "^2.0.0"
 
@@ -3725,6 +3744,13 @@
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.3.tgz#6209321eb2c1712a7e7466422b8cb1fc0d9dd5d8"
   integrity sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==
+
+"@types/storybook__addon-actions@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@types/storybook__addon-actions/-/storybook__addon-actions-5.2.1.tgz#1a6820d76d24e3af7d3cb2828b7b4ae4281e4093"
+  integrity sha512-FyxvLsL23H55GD1EEQnRd6TcYU+dbbxtRdreMtaRRgpmTVJ3N7BGyWZIYjou4ja1/pD8xwwvIaqZo3Ew7HEw2w==
+  dependencies:
+    "@storybook/addon-actions" "*"
 
 "@types/styled-components@^5.1.29":
   version "5.1.34"
