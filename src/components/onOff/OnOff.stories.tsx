@@ -2,7 +2,6 @@ import type {Meta, StoryObj} from '@storybook/react';
 
 import {OnOff} from './OnOff'
 import React, {useState} from "react";
-import {Rating, RatingValueType} from "../Rating/Rating";
 
 export default {
     title: "OnOff",

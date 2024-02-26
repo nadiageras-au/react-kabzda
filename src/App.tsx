@@ -8,7 +8,7 @@ import {StyledBtn} from "./components/Button/Button.styled";
 import {myTheme} from "./styles/Theme.styled";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {OnOff} from "./components/onOff/OnOff";
-import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledAccordion} from "./components/__UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
@@ -26,7 +26,7 @@ function App() {
             <UncontrolledOnOff />
             <UncontrolledRating value={4}/>
 
-            <Accordion titleValue="Menu" collapsed={accordionCollapsed} onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>
+            {/*<Accordion titleValue="Menu" collapsed={accordionCollapsed} onChange={()=>{setAccordionCollapsed(!accordionCollapsed)}}/>*/}
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
