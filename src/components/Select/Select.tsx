@@ -3,26 +3,31 @@ import s from './Select.module.css'
 import {action} from "@storybook/addon-actions";
 
 
-type ItemType = {
+export type ItemType = {
+
+    country?:string
     title: string
     value: any
 }
 
-type SelectPropsType = {
+export type SelectPropsType = {
+    id?: string
     value?: any
     onChange: (value: any) => void
     items: ItemType[]
 }
-export const Select = (props: SelectPropsType) => {
+export const Select = React.memo((props: SelectPropsType) => {
+    console.log('select id ',props.id)
     const [active, setActive] = useState(false);
     const [hoveredElementValue, setHoveredElementValue] = useState(props.value)
 
     const selectedItem = props.items.find(i => i.value === props.value);
     const hoveredItem = props.items.find(i => i.value === hoveredElementValue);
 
-    useEffect(() => {
-        setHoveredElementValue(props.value);
-    }, [props.value]);
+    // useEffect(() => {
+    //     setHoveredElementValue(props.value);
+    // }, [props.value]);
+
     const toggleItems = () => setActive(!active);
     const onItemClick = (value: any) => {
         props.onChange(value);
@@ -77,4 +82,5 @@ export const Select = (props: SelectPropsType) => {
     </div>
 
 
-}
+})
+
